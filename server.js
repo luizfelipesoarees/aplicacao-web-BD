@@ -5,19 +5,20 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // Use a variável de ambiente PORT do Netlify ou a porta 3000 localmente
 const JWT_SECRET = 'seu_segredo_para_token'; // Altere para um segredo mais seguro
 
 // Configuração do banco de dados
 const config = {
-    user: 'Luiz',
-    password: 'LinkZ0903#',
-    server: 'fatec-projetos.database.windows.net',
-    database: 'fatec-projeto1',
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    server: process.env.DB_SERVER,
+    database: process.env.DB_DATABASE,
     options: {
         encrypt: true // Dependendo da configuração do seu servidor SQL Server
     }
 };
+
 
 app.use(express.json());
 
