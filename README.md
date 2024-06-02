@@ -36,13 +36,13 @@
 >![image](https://github.com/luizfelipesoarees/aplicacao-web-bd/assets/141787273/69a90ba5-e35f-4e1d-bdf4-87ac2418ee31)
 
 ### Banco de dados
-> Usuários
+#### Usuários
 > ![image](https://github.com/luizfelipesoarees/aplicacao-web-bd/assets/141787273/92368873-95f2-4145-bd9e-be6dee22bceb)
 
-> Vida
+#### Vida
 > ![image](https://github.com/luizfelipesoarees/aplicacao-web-bd/assets/141787273/d9ba94ea-774f-47a4-a3ff-7e2d5c9ecf31)
 
-> Log de ações
+#### Log de ações
 > ![image](https://github.com/luizfelipesoarees/aplicacao-web-bd/assets/141787273/c945b5ad-3634-4c79-ab89-c441d9638e4d)
  
 ## 💾 Tecnologias Utilizadas
