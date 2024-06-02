@@ -8,6 +8,16 @@
 
 > Além das funcionalidades de jogo, a aplicação possui um dashboard interativo que exibe os dados gerados durante o jogo. Esses dados, são armazenados no Banco de Dados Azure e mostrados através da dashboard.
 
+## ⚙️ Funcionalidades do projeto
+> Login e Cadastro de Usuários:
+
+>![image](https://github.com/luizfelipesoarees/aplicacao-web-bd/assets/141787273/df16efc3-771d-468b-97cf-bb93339dd1df)
+>![image](https://github.com/luizfelipesoarees/aplicacao-web-bd/assets/141787273/31e21e47-fb38-45ab-b14a-ccdbfad86e6b)
+
+
+
+
+
 ## ⚙️ Funcionalidades do jogo
 > Link possui habilidades de ataque, defesa, uso de poções e fuga.
 
