@@ -77,7 +77,7 @@ const ComponenteSignIn = {
                 if (response.ok) {
                     alert('Usuário registrado com sucesso!');
                     // Redirecionar para a página de login
-                    window.location.href = '/login';
+                    window.location.href = 'index.html';
                 } else {
                     alert('Erro ao registrar usuário.');
                 }
