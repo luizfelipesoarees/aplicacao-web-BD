@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "routes": [
+      { "src": "/index.html", "dest": "/index.html" },
+      { "src": "/jogo.html", "dest": "/jogo.html" },
+      { "src": "/api/(.*)", "dest": "server.js" },
+      { "src": "(.*)", "dest": "/index.html" }
+    ]
+  }
+  
