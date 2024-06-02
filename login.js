@@ -29,7 +29,7 @@ const ComponenteLogin = {
                     const data = await response.json();
                     alert('Login realizado com sucesso!');
                     // Redirecionar para a página do jogo ou dashboard
-                    window.location.href = '/';
+                    window.location.href = 'jogo.html';
                 } else {
                     alert('Erro ao fazer login. Verifique suas credenciais.');
                 }
