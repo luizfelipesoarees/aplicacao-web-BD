@@ -1,45 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-    <title>Jogo - Herói e Vilão</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/img/triforce-icon.svg">
+    <meta charset="UTF-8">
+    <title>Login e Cadastro</title>
+    <link rel="stylesheet" href="login.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
 <div id="app">
-    <div class="personagens-container">
-        <div class="personagem">
-            <div class="barra-vida" :class="{'verde': heroi.vida >= 80, 'amarela': heroi.vida >= 30 && heroi.vida < 80, 'vermelha': heroi.vida < 30}">{{ heroi.vida }}</div>
-            <div class="sprite" style="background-image: url(/img/link-heroi.jpg);"></div>
-            <h1>Link</h1>
-            <div class="acoes">
-                <button @click="atacar(true)">Atacar</button>
-                <button @click="defender(true)">Defender</button>
-                <button @click="usarPocao(true)">Usar Poção</button>
-                <button @click="correr(true)">Correr</button>
-            </div>
-        </div>
-        <div class="personagem" v-if="vilao.vida > 0">
-            <div class="barra-vida" :class="{'verde': vilao.vida >= 80, 'amarela': vilao.vida >= 30 && vilao.vida < 80, 'vermelha': vilao.vida < 30}">{{ vilao.vida }}</div>
-            <div class="sprite" style="background-image: url(/img/ganondorf-vilao.jpg);"></div>
-            <h1>Ganondorf</h1>
-            <div class="acoes">
-                <button style="display:none">Atacar</button>
-                <button style="display:none">Defender</button>
-                <button style="display:none">Usar Poção</button>
-                <button style="display:none">Correr</button>
-            </div>
-        </div>
-    </div>
-    <div>
-        <button class="dashboard-button" onclick="window.location.href = 'dashboard.html';">Dashboard</button>
-    </div>
-    
-    <div class="creditos">Desenvolvido por Luiz Felipe Vieira Soares</div>
+    <button @click="alterarComponentes">{{ textoBotao }}</button>
+
+    <transition name="fade" mode="out-in">
+        <component :is="componenteAtual"></component>
+    </transition>
 </div>
 </body>
 </html>
-<script src="index.js"></script>
+<script src="login.js"></script>
