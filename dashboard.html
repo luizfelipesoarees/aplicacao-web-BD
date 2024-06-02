@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Jogo Herói e Vilão</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+</head>
+<body>
+    <div id="dashboard" class="container">
+        <h1>Dashboard</h1>
+        <div class="content">
+            <!-- Informações do herói e do vilão -->
+            <div class="personagens">
+                <div class="personagem">
+                    <h2>Link</h2>
+                    <div>Vida: {{ heroiVida }}%</div>
+                </div>
+                <div class="personagem">
+                    <h2>Ganondorf</h2>
+                    <div>Vida: {{ vilaoVida }}%</div>
+                </div>
+            </div>
+            
+            <!-- Logs de Ações -->
+            <div class="logs">
+                <h2>Logs de Ações</h2>
+                <ul>
+                    <li v-for="(log, index) in reversedLogs" :key="index">{{ log.Acao }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        new Vue({
+            el: '#dashboard',
+            data: {
+                heroiVida: '',
+                vilaoVida: '',
+                logs: []
+            },
+            computed: {
+                reversedLogs() {
+                    return this.logs.slice().reverse().slice(0, 10); // Mostrar apenas os 10 logs mais recentes
+                }
+            },
+            mounted() {
+                this.fetchCharacterData();
+                this.fetchLogData();
+            },
+            methods: {
+                async fetchCharacterData() {
+                    try {
+                        const response = await fetch('/characters');
+                        const data = await response.json();
+                        this.heroiVida = data.heroi.Vida;
+                        this.vilaoVida = data.vilao.Vida;
+                    } catch (error) {
+                        console.error('Erro ao buscar dados dos personagens:', error);
+                    }
+                },
+                async fetchLogData() {
+                    try {
+                        const response = await fetch('/logAcoes');
+                        this.logs = await response.json();
+                    } catch (error) {
+                        console.error('Erro ao buscar logs de ações:', error);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

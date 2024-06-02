@@ -1,0 +1,60 @@
+body {
+    font-family: 'Poppins';
+    background-color: rgb(100,151,177);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.componente {
+    padding: 20px;
+    background-color: rgb(234, 215, 188);;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    width: 300px;
+    border-radius: 0px 0px 8px 8px;
+    box-sizing: border-box;
+}
+
+.componente h1 {
+    color: rgb(0,91,150);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px 8px;
+    border: 1px solid #f0e6d2;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Poppins'; 
+    background-color: #f0e6d2; 
+    outline: none; 
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: 2px solid #c99f7a;
+}
+
+button {
+    font-family: 'Poppins';
+    width: 100%;
+    padding: 12px 20px;
+    background-color: rgb(0,91,150);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(13, 123, 186);
+}
+
+

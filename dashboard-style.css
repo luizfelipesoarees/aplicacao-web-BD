@@ -1,0 +1,89 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(100,151,177);
+    font-family: 'Poppins', sans-serif;
+    margin-left: -40%
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgb(234, 215, 188);
+    border-radius: 8px;
+    border: 2px solid rgb(236, 207, 163);
+}
+
+h1 {
+    text-align: center;
+}
+
+.personagens {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.personagem {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgb(0,91,150);
+    color: whitesmoke;
+    font-size: 24px;
+}
+
+.personagem:nth-child(1) {
+    margin-right: 20px; 
+}
+
+.personagem:nth-child(2) {
+    margin-left: 20px; 
+}
+
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#heroiVida,
+#vilaoVida {
+    font-size: 18px;
+}
+
+.log {
+    width: 20%;
+    max-height: 40%; 
+    overflow-y: auto; 
+    padding: 20px; 
+    background-color: rgb(234, 215, 188);
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    position: fixed; 
+    top: 7%; 
+    right: 9%; 
+}
+
+.log ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.log li {
+    background-color: rgb(0,91,150);; 
+    margin: 8px 0; 
+    padding: 16px; 
+    border-radius: 5px; 
+    color: whitesmoke;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease; 
+}
+
+.log li:hover {
+    background-color: rgb(13, 123, 186);
+}
