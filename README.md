@@ -11,14 +11,13 @@
 ## ⚙️ Funcionalidades do projeto
 > Login e Cadastro de Usuários:
 
+> Os usuários podem se cadastrar e logar na plataforma.
+
 >![image](https://github.com/luizfelipesoarees/aplicacao-web-bd/assets/141787273/df16efc3-771d-468b-97cf-bb93339dd1df)
 >![image](https://github.com/luizfelipesoarees/aplicacao-web-bd/assets/141787273/31e21e47-fb38-45ab-b14a-ccdbfad86e6b)
 
+> Jogo "Herói e Vilão":
 
-
-
-
-## ⚙️ Funcionalidades do jogo
 > Link possui habilidades de ataque, defesa, uso de poções e fuga.
 
 > O adversário, Ganondorf, também possui as mesmas habilidades e tenta derrotar o herói.
@@ -29,6 +28,9 @@
 
 > O jogo termina quando a vida de um dos personagens chega a zero, e uma mensagem indica qual personagem foi o vencedor da batalha.
 
-> ![image](https://github.com/luizfelipesoarees/jogo-heroi-vilao/assets/141787273/6b5cb702-8106-47b0-9f2f-f29212706350)
+>![image](https://github.com/luizfelipesoarees/aplicacao-web-bd/assets/141787273/a90d9d03-4a05-43e0-bc1b-c7951e8ddbac)
 
+> Dashboard:
+> Ao clicar no botão dashboard, os usuários são direcionados para outra tela, onde a quantidade de vida e ações dos personagens são exibidas a partir do banco de dados.
+>![image](https://github.com/luizfelipesoarees/aplicacao-web-bd/assets/141787273/69a90ba5-e35f-4e1d-bdf4-87ac2418ee31)
 
