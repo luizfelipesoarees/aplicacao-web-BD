@@ -174,6 +174,3 @@ app.get('/login', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor Express rodando na porta ${PORT}`);
 });
-
-const cors = require('cors');
-app.use(cors());
