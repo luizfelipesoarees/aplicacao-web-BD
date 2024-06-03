@@ -19,7 +19,6 @@ const config = {
     }
 };
 
-
 app.use(express.json());
 
 // Servir arquivos estáticos da raiz do projeto
