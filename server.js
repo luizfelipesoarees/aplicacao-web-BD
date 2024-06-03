@@ -10,19 +10,25 @@ const JWT_SECRET = 'seu_segredo_para_token'; // Altere para um segredo mais segu
 
 // Configuração do banco de dados
 const config = {
-    user: 'Luiz',
-    password: 'LinkZ0903#',
-    server: 'fatec-projetos.database.windows.net',
-    database: 'fatec-projeto1',
-    options: {
-        encrypt: true // Dependendo da configuração do seu servidor SQL Server
-    }
+    connectionString: "mssql://Luiz:LinkZ0903#@fatec-projetos.database.windows.net:1433/fatec-projeto1?encrypt=true&trustServerCertificate=false&hostNameInCertificate=*.database.windows.net&loginTimeout=30"
 };
 
 app.use(express.json());
 
 // Servir arquivos estáticos da raiz do projeto
 app.use(express.static(__dirname));
+
+// Função para conectar ao banco de dados
+const connectToDatabase = async () => {
+    try {
+        const pool = await sql.connect(config);
+        console.log('Conexão bem-sucedida com o banco de dados.');
+        return pool;
+    } catch (error) {
+        console.error('Erro ao conectar ao banco de dados:', error);
+        throw error;
+    }
+};
 
 // Rota para atualizar a vida do herói e do vilão
 app.post('/atualizarVida', async (req, res) => {
@@ -170,6 +176,12 @@ app.get('/login', (req, res) => {
 });
 
 // Iniciar o servidor
-app.listen(PORT, () => {
-    console.log(`Servidor Express rodando na porta ${PORT}`);
+app.listen(PORT, async () => {
+    try {
+        // Conectar ao banco de dados ao iniciar o servidor
+        await connectToDatabase();
+        console.log(`Servidor Express rodando na porta ${PORT}`);
+    } catch (error) {
+        console.error('Erro ao iniciar o servidor:', error);
+    }
 });
