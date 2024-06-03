@@ -1,7 +1,7 @@
 ## 💻 Aplicação Web com BD Relacional
 
 ## 🌐 Teste o projeto
-> Link
+> https://aplicacao-web-bd.vercel.app
 
 ## 📜 Sobre o projeto 
 > O objetivo deste projeto é desenvolver uma aplicação web utilizando as tecnologias VueJS, Node.js e Banco de Dados Azure. A aplicação proporciona funcionalidades de login e cadastro de usuários, permitindo que os usuários autenticados possam acessar e jogar a avaliação desenvolvda no anteriormente, "Herói e Vilão".
