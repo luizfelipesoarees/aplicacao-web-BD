@@ -8,6 +8,9 @@
 
 > Além das funcionalidades de jogo, a aplicação possui um dashboard interativo que exibe os dados gerados durante o jogo. Esses dados, são armazenados no Banco de Dados Azure e mostrados através da dashboard.
 
+## 🎥 Vídeo demonstrativo
+> https://drive.google.com/file/d/1DvneJl060DNgjVPEzyS1gop1jFS_XvjR/view?usp=sharing
+
 ## ⚙️ Funcionalidades do projeto
 ### Login e Cadastro de Usuários
 
